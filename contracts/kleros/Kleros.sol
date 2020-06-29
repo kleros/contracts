@@ -2,14 +2,16 @@
  *  @title Kleros
  *  @author Clément Lesaege - <clement@lesaege.com>
  *  This code implements a simple version of Kleros.
+ *  Note that this was the contract used in the first version of Kleros.
+ *  Current one is KlerosLiquid.
  *  Bug Bounties: This code hasn't undertaken a bug bounty program yet.
  */
 
 pragma solidity ^0.4.24;
 
-import "kleros-interaction/contracts/standard/rng/RNG.sol";
-import "kleros-interaction/contracts/standard/arbitration/Arbitrator.sol";
-import { MiniMeTokenERC20 as Pinakion } from "kleros-interaction/contracts/standard/arbitration/ArbitrableTokens/MiniMeTokenERC20.sol";
+import "@kleros/kleros-interaction/contracts/standard/rng/RNG.sol";
+import "@kleros/kleros-interaction/contracts/standard/arbitration/Arbitrator.sol";
+import { MiniMeTokenERC20 as Pinakion } from "@kleros/kleros-interaction/contracts/standard/arbitration/ArbitrableTokens/MiniMeTokenERC20.sol";
 import { ApproveAndCallFallBack } from "minimetoken/contracts/MiniMeToken.sol";
 
 contract Kleros is Arbitrator, ApproveAndCallFallBack {

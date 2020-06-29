@@ -1,7 +1,9 @@
 pragma solidity ^0.4.4;
 
 // Test Imports
-import "kleros-interaction/contracts/standard/rng/ConstantNG.sol";
+import "@kleros/kleros-interaction/contracts/standard/rng/ConstantNG.sol";
+import "@kleros/kleros-interaction/contracts/standard/arbitration/EnhancedAppealableArbitrator.sol";
+import "@kleros/kleros-interaction/contracts/standard/arbitration/TwoPartyArbitrable.sol";
 
 contract Migrations {
     address public owner;
